@@ -87,3 +87,24 @@ h5 {
     
 
 }
+@media (max-width: 991px) {
+    .row.justify-content-center > [class*='col-'] {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 700px) {
+    .row.justify-content-center > [class*='col-'] {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    .mission {
+        font-size: 1rem;
+    }
+}
