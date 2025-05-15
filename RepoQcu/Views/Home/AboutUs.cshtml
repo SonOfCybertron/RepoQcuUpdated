@@ -1,9 +1,54 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
+﻿@section Styles {
+    <link rel="stylesheet" href="~/css/AboutUs.css" />
 }
-@{
-    ViewData["Title"] = "About Us";
-}
-<h1>@ViewData["Title"]</h1>
+@model YourNamespace.Models.AboutUsViewModel
 
-<p>Use this page to detail your site's privacy policy.</p>
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="container py-4">
+    <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-8">
+            <h1 class="display-5 mb-4">@Model.Title</h1>
+            <br />
+            <img src="~/images/gg.png" />
+            <br />
+            <br />
+            <p class="graph">
+                @Model.Description
+            </p>
+            <br />
+            <br />
+            <h1 class="mission">Mission</h1>
+            <p class="graph">
+                @Model.Mission
+            </p>
+        </div>
+    </div>
+    <h1 class="devType">Meet the Team</h1>
+    <br />
+    <br />
+    <div class="row justify-content-center text-center">
+       
+        
+        @foreach (var dev in Model.Developers)
+        {
+            <div class="col-12 col-sm-6 col-md-4 mb-4 d-flex flex-column align-items-center">
+                <img src="@dev.ImageUrl" alt="@dev.Name" class="developer-img rounded-circle mb-3" />
+                <h5 class="devName">@dev.Name</h5>
+                <p class="devTitle">@dev.CourseTitle</p>
+            </div>
+        }
+    </div>
+</div>
+
+<style>
+    .developer-img {
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        object-position: center;
+        border: 3px solid #007bff;
+    }
+</style>

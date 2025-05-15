@@ -111,3 +111,19 @@ body {
         box-shadow: 0 5px #666;
         transform: translateY(4px);
     }
+/* Make footer text responsive */
+footer {
+    font-size: 0.9rem;
+}
+
+/* Example mobile tweaks */
+@media (max-width: 576px) {
+    footer {
+        font-size: 0.8rem;
+    }
+
+    .navbar-nav .nav-link {
+        text-align: center;
+        padding: 10px;
+    }
+}
