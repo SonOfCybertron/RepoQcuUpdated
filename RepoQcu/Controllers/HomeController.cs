@@ -104,7 +104,7 @@ namespace RepoQcu.Controllers
                     },
                      new Developer
                     {
-                        ImageUrl = "/images/Dexisne.jpg",
+                        ImageUrl = "/images/Rivamonte.jpg",
                         Name = "Jonalyn M. Rivamonte",
                         CourseTitle = "Information Technology"
                     },
